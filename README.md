@@ -22,11 +22,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.konka</groupId>
+    <groupId>com.moguichun</groupId>
     <artifactId>mvn-aggergator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+
     <modules>
         <module>mvn-module1</module>
         <module>mvn-module2</module>
@@ -43,11 +43,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.konka</groupId>
+    <groupId>com.moguichun</groupId>
     <artifactId>mvn-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+
 	<modules>
 		<module>mvn-dao</module>
 		<module>mvn-service</module>
@@ -63,11 +63,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.konka</groupId>
+		<groupId>com.moguichun</groupId>
 		<artifactId>mvn-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>mvn-dao</artifactId>
 	<packaging>jar</packaging>
 	<name>mvn-dao</name>
@@ -77,7 +77,7 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.konka</groupId>
+			<groupId>com.moguichun</groupId>
 			<artifactId>mvn-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
@@ -119,7 +119,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.konka</groupId>
+	<groupId>com.moguichun</groupId>
 	<artifactId>mvn-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -208,7 +208,7 @@
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>com.konka</groupId>
+            <groupId>com.moguichun</groupId>
             <artifactId>mvn-parent</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>pom</type>
@@ -275,7 +275,7 @@ demo中，我们的mvn-web模块依赖了common这个web项目。只需要在mvn
 1.添加依赖：
 ```
 	<dependency>
-			<groupId>com.konka</groupId>
+			<groupId>com.moguichun</groupId>
 			<artifactId>webcommon</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>war</type>
@@ -290,7 +290,7 @@ demo中，我们的mvn-web模块依赖了common这个web项目。只需要在mvn
 				<configuration>
 					<overlays>
 						<overlay>
-							<groupId>com.konka</groupId>
+							<groupId>com.moguichun</groupId>
 							<artifactId>webcommon</artifactId>
 						</overlay>
 					</overlays>
