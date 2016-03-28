@@ -9,7 +9,7 @@
 > 3. mvn-parent项目mvn install；
 > 4. 将mvn-web.war发布到服务器；
 > 5. 请求hosturl/displayAllUser.do；
-> 6. 访问/index.jsp；
+> 6. 访问hosturl/index.jsp；
 
 ### 1.2 概述
 　　使用Maven多模块构建项目有两种方式：
