@@ -45,14 +45,6 @@
 			<version>0.5</version>
 		</dependency>
 
-		<!-- 接口包 -->
-		<dependency>
-			<groupId>com-scc</groupId>
-			<artifactId>common-inter</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>
