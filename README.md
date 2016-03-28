@@ -1,10 +1,17 @@
 ﻿# Maven多模块构建项目
 
-标签（空格分隔）： Maven
-
 ---
 
-## 1.概述
+## 1.关于本Demo
+### 1.1 如何运行
+> 1. 首先先使用SQL脚本生称数据库，并且修改mvn-parent/mvn-dao/src/main/resources/config.properties中的数据库设置；
+> 2. web-common项目mvn install；
+> 3. mvn-parent项目mvn install；
+> 4. 将mvn-web.war发布到服务器；
+> 5. 请求hosturl/displayAllUser.do；
+> 6. 访问/index.jsp；
+
+### 1.2 概述
 　　使用Maven多模块构建项目有两种方式：
 > 1. 聚合，主要是为了方便快速构建项目；
 > 2. 基础，主要是为了消除重复配置。
@@ -89,26 +96,24 @@
 
 ### 3.1 可继承的元素
 　　在Maven多模块中，可以继承的元素如下：
-|元素|描述|
-|----|----|
-|groupId|项目组ID，项目坐标的核心元素|
-|version|项目版本，项目坐标的核心元素|
-|description|项目的描述信息|
-|organazation|项目的组织信息|
-|inceptionYear|项目的创始年份|
-|developers|项目的开发者信息|
-|contributors|项目的贡献者信息|
-|distributionManagement|项目的部署信息|
-|issueManagement|项目的缺陷跟踪系统信息|
-|ciManagement|项目的持续集成系统信息|
-|scm|项目的版本控制系统信息|
-|mailingLists|项目的邮件列表信息|
-|properties|自定义的Maven属性|
-|dependencies|项目的依赖配置|
-|dependencyManagement|项目的依赖管理配置|
-|repositories|项目的仓库配置|
-|build|包括项目的源码目录配置、输出目录配置、插件配置、插件管理配置等|
-|reporting|包括项目的报告输出目录配置、报告插件配置|
+> 1. groupId，项目组ID；
+> 2. version，项目版本；
+> 3. description，项目描述信息；
+> 4. organazation，项目的组织信息；
+> 5. inceptionYear，项目的创始年份；
+> 6. developers，项目开发者信息；
+> 7. contributors，项目的贡献者信息；
+> 8. distributionManagement，项目的部署信息；
+> 9. issueManagement，项目的缺陷跟踪系统信息；
+> 10. ciManagement，项目的持续集成系统信息；
+> 11. scm，项目的版本控制系统信息；
+> 12. mailingLists，项目的邮件列表信息；
+> 13. properties，自定义的Maven属性；
+> 14. dependencies，项目的依赖配置；
+> 15. dependencyManagement，项目的依赖管理配置；
+> 16. repositories，项目的仓库配置；
+> 17. build，包括项目的源码目录配置、输出目录配置、插件配置、插件管理配置等；
+> 18. reporting，包括项目的报告输出目录配置、报告插件配置。
 
 ### 3.2 依赖管理
 　　只要是上节中所列出的元素在父模块中配置后，子模块就会继承。但是在某些情况下，一些特殊的子模块比如util模块，不需要继承父模块中配置的一些依赖如springframek等等，那么我们可以使用**dependencyManagement元素来解决这种情况。
